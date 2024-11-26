@@ -7,7 +7,7 @@
 - Python
 - Django
 - PostgreSQL
-- HTML/CSS/JavaScript
+- HTML/Bootstrap
 - Matplotlib (для построения графиков)
 
 ## Основные функциональные возможности
