@@ -7,6 +7,7 @@
 - Python
 - Django
 - PostgreSQL
+- Paginator
 - HTML/Bootstrap
 - Matplotlib (для построения графиков)
 
