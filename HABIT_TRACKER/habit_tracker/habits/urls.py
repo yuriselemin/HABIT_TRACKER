@@ -22,3 +22,5 @@ urlpatterns = [
                   path('about-us/', about_us, name='about_us'),
                   path('logout/', CustomLogoutView.as_view(), name='logout'),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
