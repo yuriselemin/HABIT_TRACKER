@@ -4,8 +4,12 @@ from .views import welcome
 from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth.views import LogoutView
+from django.urls import reverse_lazy
 
 
+class CustomLogoutView(LogoutView):
+    next_page = reverse_lazy('welcome')
 
 
 urlpatterns = [
@@ -16,4 +20,5 @@ urlpatterns = [
                   path('home/', home, name='home'),
                   path('', welcome, name='welcome'),
                   path('about-us/', about_us, name='about_us'),
+                  path('logout/', CustomLogoutView.as_view(), name='logout'),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
