@@ -1,5 +1,11 @@
 from django import forms
 from .models import Habit, DailyProgress, Users
+from django.contrib.auth.forms import AuthenticationForm
+
+
+
+class LoginForm(AuthenticationForm):
+    pass
 
 
 class RegisterForm(forms.ModelForm):

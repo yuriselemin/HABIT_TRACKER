@@ -37,6 +37,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about_us' %}">О нас</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Войти</a>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <form action="{% url 'logout' %}" method="post">
@@ -52,7 +55,7 @@
 </div>
 <!-- Контент -->
 <div class="container container-md">
-    <h1 class="mt-5 ">Добро пожаловать в <strong>HABIT TRACKER</strong>  - наш трекер привычек!</h1>
+    <h1 class="mt-5 ">Добро пожаловать в <strong>HABIT TRACKER</strong> - наш трекер привычек!</h1>
     <h3 class="my-5">Как известно, привычка формируется за 40 дней, и именно столько времени требуется нашему мозгу,
         чтобы адаптироваться к новым поведенческим моделям. <br>Мы создали уникальное приложение, которое
         поможет вам освоить полезные навыки и избавиться от тех привычек, которые больше не служат вашим целям.
