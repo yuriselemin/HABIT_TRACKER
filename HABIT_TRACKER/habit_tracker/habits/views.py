@@ -96,7 +96,7 @@ def daily_progress(request, habit_id):
     # Проверяем, есть ли запись о прогрессе за сегодняшний день
     today_progress = habit.daily_progress.filter(date=today).exists()
 
-    # Переносим функциональность сюда
+    # Формируем график
     progress_data = habit.daily_progress.all().values_list('date', 'completed')
     dates = [p[0].strftime('%d-%m-%Y') for p in progress_data]
     completions = [bool(p[1]) for p in progress_data]
