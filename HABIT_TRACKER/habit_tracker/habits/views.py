@@ -5,16 +5,16 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from datetime import timedelta, datetime
 from .models import Habit, DailyProgress, Users
-from .forms import HabitForm, DailyProgressForm
+from .forms import HabitForm, DailyProgressForm, LoginForm
 from matplotlib import pyplot as plt
 from io import BytesIO
 import base64
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .forms import LoginForm
 
 
 
 
+# Функция для входа
 def login_user(request):
     if request.method == 'POST':
         form = LoginForm(data=request.POST)
